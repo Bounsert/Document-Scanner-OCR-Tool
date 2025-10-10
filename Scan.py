@@ -1,35 +1,3 @@
-"""
-Advanced Document Scanner with OCR, noise/shadow removal, PDF/A conversion and EXE instructions
-(document_scanner.py)
-
-New features added:
-- OCR using pytesseract (if Tesseract OCR is installed on the system). Extracted text saved as .txt next to each scanned image.
-- Noise reduction (bilateral filter) and shadow removal (background estimate) options.
-- Option to attempt PDF/A conversion using Ghostscript (if installed). If Ghostscript isn't available, a normal optimized PDF is produced.
-- GUI checkbox to enable OCR, controls for noise/shadow removal, and a button that shows step-by-step instructions and a ready-to-run PyInstaller command to build a Windows .exe.
-- All previous features retained: Tkinter GUI, batch processing, multi-document detection, PDF creation, auto-rename, progress bar and logs.
-
-Dependencies:
-- Required: opencv-python, numpy, imutils, pillow
-- Optional for OCR: pytesseract + system Tesseract (https://github.com/tesseract-ocr/tesseract)
-- Optional for PDF/A conversion: Ghostscript (gs) installed and available in PATH
-
-Install Python packages:
-
-pip install opencv-python numpy imutils pillow pytesseract
-
-Note: For OCR to work you must also install Tesseract on your machine and ensure the tesseract executable is in PATH. On Windows you can install from https://github.com/UB-Mannheim/tesseract/wiki. On macOS brew install tesseract. On Linux use your package manager.
-
-Usage:
-- Run: python document_scanner.py
-- Use GUI: choose image/folder/webcam, toggle OCR/noise/shadow removal, set output directory, click Start.
-
-Limitations:
-- I cannot build the .exe for you inside this environment. The GUI provides a ready-made PyInstaller command and a step-by-step guide — you run that locally to produce the .exe.
-- PDF/A conversion requires Ghostscript installed locally; the script will attempt to run it if you enable the option.
-
-"""
-
 import os
 import threading
 import cv2
@@ -449,4 +417,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
