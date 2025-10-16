@@ -25,8 +25,6 @@ Features
 Installation
 
 1. Clone or download this repository
-git clone https://github.com/yourusername/document-scanner.git
-cd document-scanner
 
 2. Install dependencies
 pip install opencv-python numpy imutils pillow pytesseract
